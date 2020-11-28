@@ -16,8 +16,7 @@ class Mycab:
         
 
     #Drive Login Function 
-    def driver_login(self, name, password, otp , status):
-        
+    def driver_login(self, name, password, otp , status): 
         if status == 'on' or 'ON':
             self.driver_status = 'Active' #updating driver status attribute 
             print('hey',name +',', "Your now", self.driver_status) 
@@ -133,18 +132,6 @@ class Mycab:
       else: print('Please relogin to book return ride') 
 
 if __name__=='__main__':
-    
-    # print("<<<--------------------------------Driver Login Portal-------------------------------->>>")
-  
-  #Driver login start
-#   name = input('Enter your ID: ')
-#   password = input('Enter your Password: ')
-#   otp = input('Enter OTP: ')
-#   status = input('Enter ON/OFF: ') 
-#   driver_login = Mycab()
-#   driver_login.driver_login(name, password, otp, status)
-  #Driver login end
-  ##
   #Rider Login Start
      print('----------------------------------------------------MyCabs----------------------------------------------------')
      rider = Mycab()
@@ -204,3 +191,15 @@ if __name__=='__main__':
      print("//////////////////")
      print("")
      driver.end()
+     #Driver portal
+     print(input('Driver Login - Press Enter'))
+     print("<<<--------------------------------Driver Login Portal-------------------------------->>>")
+     name = input('Enter your ID: ')
+     password = input('Enter your Password: ')
+     print('Your One time password 2345')
+     print("")
+     otp = input('Enter OTP: ')
+     status = input('Enter ON/OFF: ') 
+     driver_login = Mycab()
+     driver_login.driver_login(name, password, otp, status)
+  #Driver login end
